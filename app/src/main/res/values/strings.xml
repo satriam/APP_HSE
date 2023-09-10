@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">HSE App</string>
+    <string-array name="question_Loading">
+        <item>Apakah Lebar Loading Point sesuai dengan parameter hingga pergerakan manuver dump truck aman sesuai jenis dump truck</item>
+        <item>Apakah permukaan loading point rata dan bebas dari tumpahan material berserakan?</item>
+        <item>Apakah grade jalan atau rambu menuju loading sesuai parameter &lt; 8%</item>
+        <item>Apakah ada alat support Buldozer untuk membersihkan loading point</item>
+        <item>Apakah fatok survey sudah terpasang lengkap sebagai acuan</item>
+        <item>Apakah penggalian sudah sesuai desain atau patok survey acuan kerja</item>
+        <item>Apakah pada lokasi kerja aman dari potensi longsor dan material menggantung</item>
+        <item>Apakah cukup penerangan untuk operasi malam hari (NAB :20LUX)</item>
+        <item>Apakah material siap loading ( Sudah diblasing, dripping, cukup lunak untuk digali dimuat) dan cukup untuk pada shift ini-</item>
+        <item>Apakah saluran air yang diluar atau didalam areal tambang berfungsi dengan baik?</item>
+        <item>Apakah saluran air disepanjang jalan angkut, jika ada, apakah berfungsi dengan baik?</item>
+        <item>Apakah pada permukaan loading point bebas dari genangan air dan terbebas dari cekungan potensi untuk terjadinya kantungan air</item>
+        <item>Apakah gorong-gorong(jika ada) cukup untuk debit air yang lewat</item>
+        <item>Apakah tinggi loading point sesuai parameter (sesuai denga Hauler)</item>
+        <item>Apakah terdapat rambu/Peringatan terpasang dengan jumlah memadai</item>
+        <item>Apakah jalan tidak digunakan lagi atau jalan yang terdapat beda tinggi telah diberikade atau diblok</item>
+        <item>Apakah alat yang digunakan memiliki stiker Commisioning masih berlaku</item>
+        <item>Apakah semua aliran air diarahkan menuju sump</item>
+        <item>Apakah areal ekspose batubara menjadi daerah terbatas dan minimalkan kontaminasi</item>
+        <item>Apakah Tower Lamp diletakkan pada tempat yang aman dan aktifitas alat berat</item>
+        <item>Apakah parkir kendaraan sarana aman dari manuver alat berat, radius putar dan lintasan kerja alat berat minimal 30 meter</item>
+        <item>Apakah sampah terkelola dengan baik, tidak berserakan diarea front loading</item>
+        <item>Apakah semua peralatan telah dilengkapi radio komunikasi</item>
+        <item>Tersedia area berkumpul dalam keadaan darurat atau Emergency Assembly Point</item>
+        <item>Apakah Unit Loading tersedia(Excavator/Loader) untuk loading muat material</item>
+        <item>Apakah adanya penyiraman saat area loading berdebu oleh unit water truck</item>
+
+        <!-- Add more questions as needed -->
+    </string-array>
+
+    <string-array name="question_hauling">
+        <item>Question 4</item>
+        <item>Question 5</item>
+        <item>Question 6</item>
+        <!-- Add more questions as needed -->
+    </string-array>
 </resources>

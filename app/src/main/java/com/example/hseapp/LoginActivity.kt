@@ -3,14 +3,11 @@ package com.example.hseapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
 import android.widget.ProgressBar
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.widget.AppCompatButton
 import com.example.hseapp.dataclass.SignInBody
 import com.example.hseapp.retrofit.RetrofitInstance
 import com.example.hseapp.retrofit.SessionManager
@@ -62,6 +59,8 @@ class LoginActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<SignInBody>, response: Response<SignInBody>) {
                     val loginresponse =response.body()
 
+                    Log.d("login",loginresponse.toString())
+
                     if (loginresponse != null) {
                         progressBar.visibility = View.GONE
 
@@ -71,6 +70,7 @@ class LoginActivity : AppCompatActivity() {
                             startActivity(intent)
                             finish()
                             sessionManager.saveAuthToken(loginresponse.jwt)
+                            sessionManager.saveId(loginresponse.user.id)
                             sessionManager.setLoggin(true)
                         }
                     }else{

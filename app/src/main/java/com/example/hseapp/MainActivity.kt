@@ -1,5 +1,7 @@
 package com.example.hseapp
 
+
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +13,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.hseapp.dao.DBHelper
+
 import com.example.hseapp.dataclass.DataMe
 import com.example.hseapp.dataclass.safetycampaign
 import com.example.hseapp.retrofit.RetrofitInstance
@@ -33,6 +37,30 @@ class MainActivity : AppCompatActivity() {
         fiturout()
         slider()
         fitur()
+
+
+        val dbHelper = DBHelper(this)
+        val db = dbHelper.readableDatabase
+
+        val cursor = db.rawQuery("SELECT * FROM jawaban", null)
+
+        while (cursor.moveToNext()) {
+            val id = cursor.getInt(cursor.getColumnIndex("id"))
+            val iduser = cursor.getInt(cursor.getColumnIndex("id_user"))
+            val ck = cursor.getString(cursor.getColumnIndex("kondisi1"))
+            val kode = cursor.getString(cursor.getColumnIndex("Kode_bahaya1"))
+            val ket = cursor.getString(cursor.getColumnIndex("Keterangan1"))
+            val tanggal = cursor.getString(cursor.getColumnIndex("Created_at"))
+            val Status = cursor.getInt(cursor.getColumnIndex("Status"))
+
+            // Lakukan sesuatu dengan data yang diambil, misalnya, tampilkan di logcat
+            Log.d("Database", "ID: $id,ID_USER: $iduser, Kondisi: $ck,Kode_bahaya:$kode, keterangan: $ket, tanggal: $tanggal, staus: $Status")
+        }
+
+        cursor.close()
+        db.close()
+
+
     }
 
     private fun fiturout() {
@@ -52,7 +80,6 @@ class MainActivity : AppCompatActivity() {
             }
 
             builder.setNegativeButton("Batal") { dialog, which ->
-                // Tidak melakukan apa-apa jika pengguna membatalkan logout
             }
 
             builder.show()
@@ -75,20 +102,16 @@ class MainActivity : AppCompatActivity() {
                     // Mengisi imageList dengan data dari API
                     for (campaignData in safetyCampaign?.data.orEmpty()) {
                         val imageUrl =RetrofitInstance.BASE_URL + campaignData.attributes.gambar.data.attributes.url
-                        Log.d("GAMBAR",imageUrl)
                         imageList.add(SlideModel(imageUrl))
                     }
 
                     imageslider.setImageList(imageList)
                 } else {
-                    // Menangani respons yang tidak berhasil
-                    // Misalnya, tampilkan pesan kesalahan kepada pengguna
                 }
             }
 
             override fun onFailure(call: Call<safetycampaign>, t: Throwable) {
-                // Menangani kegagalan koneksi atau permintaan
-                // Misalnya, tampilkan pesan kesalahan kepada pengguna
+
             }
         })
     }
@@ -106,16 +129,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, DumpingActivity::class.java)
             startActivity(intent)
         }
-        //hauling road
+        //loading
         val lllp = findViewById<LinearLayout>(R.id.LLLP)
         lllp.setOnClickListener{
-            val intent = Intent(this, LoadingActivity::class.java)
+            val intent = Intent(this,RVLoading::class.java)
             startActivity(intent)
         }
 
     }
-
-
     private fun getpref(){
         val apiClient = RetrofitInstance.Create(this)
         val apiService = apiClient.getUserLogin()
@@ -130,21 +151,16 @@ class MainActivity : AppCompatActivity() {
                         Nama.text = nama
 
                         val imageUrl = RetrofitInstance.BASE_URL + dataMe.ProfilePicture.url
-                        Log.d("GAMBAR",imageUrl)
                         val profilePictureImageView = findViewById<ImageView>(R.id.imageView3)
                         Picasso.get().load(imageUrl).into(profilePictureImageView)
                     } else {
-                        // DataMe null, tangani kasus ini sesuai kebutuhan Anda
                     }
                 } else {
                     val errorMessage = response.message()
-                    // Tangani respons gagal
                 }
             }
 
             override fun onFailure(call: Call<DataMe>, t: Throwable) {
-                // Tangani kegagalan jaringan atau permintaan
-                Log.d("nama", t.toString())
             }
         })
     }

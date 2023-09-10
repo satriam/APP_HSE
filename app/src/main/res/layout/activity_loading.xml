@@ -1,15 +1,474 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".LoadingActivity">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textStyle="bold"
-        android:text="LOADING POINT"
-        android:gravity="center"/>
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PERTANYAAN"/>
+        <CheckBox
+            android:id="@+id/ck1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya" />
+
+        <EditText
+            android:id="@+id/kt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PERTANYAAN"/>
+        <CheckBox
+            android:id="@+id/ck2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />\
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PERTANYAAN"/>
+        <CheckBox
+            android:id="@+id/ck3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PERTANYAAN"/>
+        <CheckBox
+            android:id="@+id/ck4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PERTANYAAN"/>
+        <CheckBox
+            android:id="@+id/ck5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PERTANYAAN"/>
+        <CheckBox
+            android:id="@+id/ck6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PERTANYAAN"/>
+        <CheckBox
+            android:id="@+id/ck7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PERTANYAAN"/>
+        <CheckBox
+            android:id="@+id/ck8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+
+        <CheckBox
+            android:id="@+id/ck9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+
+        <CheckBox
+            android:id="@+id/ck10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <CheckBox
+            android:id="@+id/ck11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <CheckBox
+            android:id="@+id/ck12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <CheckBox
+            android:id="@+id/ck13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <CheckBox
+            android:id="@+id/ck14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <CheckBox
+            android:id="@+id/ck15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <CheckBox
+            android:id="@+id/ck16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <CheckBox
+            android:id="@+id/ck17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <CheckBox
+            android:id="@+id/ck18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <CheckBox
+            android:id="@+id/ck19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <CheckBox
+            android:id="@+id/ck20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <CheckBox
+            android:id="@+id/ck21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+
+        <CheckBox
+            android:id="@+id/ck22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <CheckBox
+            android:id="@+id/ck23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <CheckBox
+            android:id="@+id/ck24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+
+        <CheckBox
+            android:id="@+id/ck25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+
+        <CheckBox
+            android:id="@+id/ck26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kondisi Aktual" />
+        <EditText
+            android:id="@+id/kd26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Bahaya"  />
+
+        <EditText
+            android:id="@+id/kt26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan" />
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+
+    </LinearLayout>
+</ScrollView>

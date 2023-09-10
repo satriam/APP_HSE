@@ -4,6 +4,7 @@ import com.example.hseapp.R
 
 import android.content.Context
 import android.content.SharedPreferences
+import java.sql.Types.NULL
 
 
 class SessionManager(context: Context){
@@ -19,6 +20,14 @@ class SessionManager(context: Context){
         val editor=prefs.edit()
         editor.putString(akses_token,token)
         editor.apply()
+    }
+    fun saveId(Id:Int){
+        val editor=prefs.edit()
+        editor.putInt("Id",Id)
+        editor.apply()
+    }
+    fun getid(): Int? {
+        return prefs?.getInt("Id", NULL)
     }
     fun fetchAuthToken():String?{
         return prefs.getString(akses_token,null)
